@@ -1,0 +1,60 @@
+.hero-copy.reveal{transition-delay:.08s}
+.hero-visual.reveal{transition-delay:.16s}
+.hero h1 span{animation:powerGlow 2.8s ease-in-out infinite}
+.sun-glow{animation:35s linear infinite spin,5.2s ease-in-out infinite aura}
+.float-badge{animation:badgeBob 4.4s ease-in-out infinite}
+.chart-bg i{transform-origin:bottom center;animation:riseBar 1.15s cubic-bezier(.2,.8,.2,1) both}
+.chart-bg i:nth-child(2){animation-delay:.08s}
+.chart-bg i:nth-child(3){animation-delay:.14s}
+.chart-bg i:nth-child(4){animation-delay:.2s}
+.chart-bg i:nth-child(5){animation-delay:.26s}
+.chart-bg i:nth-child(6){animation-delay:.32s}
+.chart-bg i:nth-child(7){animation-delay:.38s}
+.chart-bg i:nth-child(8){animation-delay:.44s}
+.chart-bg i:nth-child(9){animation-delay:.5s}
+.chart-bg i:nth-child(10){animation-delay:.56s}
+.bolts{pointer-events:none;position:absolute;inset:0;overflow:hidden;z-index:1}
+.bolts span{width:3px;height:46%;opacity:0;background:linear-gradient(transparent,#fff 40%,#9fd7ff 60%,transparent);position:absolute;filter:drop-shadow(0 0 8px #7ec8ff);animation:bolt 4.8s infinite}
+.bolts span:nth-child(1){left:12%;top:8%;transform:rotate(16deg);animation-delay:.4s}
+.bolts span:nth-child(2){right:16%;top:18%;transform:rotate(-22deg);animation-delay:1.7s}
+.bolts span:nth-child(3){left:42%;top:4%;height:30%;transform:rotate(8deg);animation-delay:2.8s}
+.bolts span:nth-child(4){right:34%;bottom:12%;height:28%;transform:rotate(-12deg);animation-delay:3.6s}
+.orbs{pointer-events:none;position:absolute;inset:0;z-index:1}
+.orbs i{width:10px;height:10px;border-radius:50%;position:absolute;background:radial-gradient(circle,#fff,#ffb15a 55%,#ff8a2a00 70%);box-shadow:0 0 16px #ffb15a;animation:orb 7s ease-in-out infinite}
+.orbs i:nth-child(1){left:8%;top:22%;animation-delay:-1s}
+.orbs i:nth-child(2){left:22%;top:70%;width:7px;height:7px;animation-delay:-2.4s}
+.orbs i:nth-child(3){right:8%;top:18%;animation-delay:-3s}
+.orbs i:nth-child(4){right:18%;bottom:16%;width:14px;height:14px;animation-delay:-4.2s}
+.orbs i:nth-child(5){left:48%;top:12%;width:6px;height:6px;animation-delay:-.6s}
+.orbs i:nth-child(6){right:40%;top:64%;animation-delay:-5s}
+.primary,.nav-shell nav button{position:relative;overflow:hidden}
+.primary:after,.nav-shell nav button:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 32%,#ffffff8a 50%,transparent 68%);transform:translateX(-130%);animation:shine 4.2s ease-in-out infinite;pointer-events:none}
+.about-art img{animation:drift 18s ease-in-out infinite alternate}
+.card-icon>svg{animation:float 4.6s ease-in-out infinite}
+.card-icon i{animation:twinkle 1.6s ease-in-out infinite alternate}
+.feature-card:nth-child(2) .card-icon>svg{animation-delay:-1.2s}
+.feature-card:nth-child(3) .card-icon>svg{animation-delay:-2.1s}
+.step>span{animation:stepPulse 2.8s ease-in-out infinite}
+.step:nth-child(2)>span{animation-delay:-.7s}
+.step:nth-child(3)>span{animation-delay:-1.4s}
+.step:nth-child(4)>span{animation-delay:-2.1s}
+.token-coin{animation:coinPulse 3.4s ease-in-out infinite}
+.gallery-card img{transition:transform .55s ease}
+.gallery-card:hover img{transform:scale(1.07)}
+.marquee svg{animation:twinkle 1.8s ease-in-out infinite alternate}
+@keyframes powerGlow{50%{text-shadow:0 0 18px #6dff4570}}
+@keyframes aura{50%{filter:brightness(1.2)}}
+.feature-card.reveal.in-view:hover{transform:translateY(-9px)}
+.step.reveal.in-view:hover{transform:translate(8px)}
+.gallery-card.reveal.in-view:hover{transform:translateY(-8px)}
+@keyframes badgeBob{50%{transform:rotate(5deg) translateY(-10px)}}
+@keyframes riseBar{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes bolt{0%,78%,100%{opacity:0}84%{opacity:.95}88%{opacity:.15}92%{opacity:.8}}
+@keyframes orb{50%{transform:translateY(-18px);opacity:.45}}
+@keyframes shine{0%,58%{transform:translateX(-130%)}78%,100%{transform:translateX(130%)}}
+@keyframes drift{to{transform:scale(1.045)}}
+@keyframes stepPulse{50%{box-shadow:0 0 0 6px #ffe14a33}}
+@keyframes coinPulse{50%{transform:translateY(-8px) scale(1.04)}}
+@media (prefers-reduced-motion:reduce){
+  .primary:after,.nav-shell nav button:after,.bolts,.orbs{display:none}
+}
